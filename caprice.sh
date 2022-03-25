@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # change to your player and finder
-PLAYER="mpv"
+PLAYER="mpv --msg-level=cplayer=warn,display-tags=status"  # mpv with less verbose output
 FINDER="fzf -i -e --cycle"
 
 # add query string if this script has parameters
@@ -58,5 +58,5 @@ while :
 do
 	# start stream
 	$PLAYER "${radio_url}"
-	sleep 5
+	sleep 5  # wait and hope problem goes away
 done
