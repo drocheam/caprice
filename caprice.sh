@@ -33,23 +33,41 @@ do
 done
 
 # make sorted genre list, let user pick one
-choice=$(printf '%s\n' "${!channels[@]}" | sort | eval "$FINDER")
+list=$(printf '%s\n' "${!channels[@]}" | sort)
 
-# exit if nothing was chosen
-[[ -n "$choice" ]] || exit
-
-# get stream link from genre page
-url="http://radcap.ru/${channels[$choice]}"
-radio_url=$(curl -s "$url" | grep "\"title\":\"1\",file:\"" | sed -r 's/.*(http:.+)\"},.*/\1/')
-
-# print channel
-printf '\nRADIO CAPRICE - %s\n\n' "$choice"
+# error flag
+error=0
 
 # use loop to restart on errors
-while :
+while : 
 do
+	# no error -> show selection screen
+	if [[ $error  -eq 0 ]]; then
+		choice=$(echo "$list" | eval "$FINDER")
+
+		# exit if nothing was chosen
+		[[ -n "$choice" ]] || exit
+
+		# get stream link from genre page
+		url="http://radcap.ru/${channels[$choice]}"
+		radio_url=$(curl -s "$url" | grep "\"title\":\"1\",file:\"" | sed -r 's/.*(http:.+)\"},.*/\1/')
+
+		# print channel
+		printf '\nRADIO CAPRICE - %s\n\n' "$choice"
+
+	# else print message and wait
+	else
+		echo "Error, waiting and retrying..."
+		sleep 3
+	fi
+
+	# reset error flag
+	error=0
+
 	# start stream
-	$PLAYER "${radio_url}"
-	sleep 5  # wait and hope problem goes away
+	# set error flag on error
+	# when PLAYER exits normally,
+	# the selection screen will be shown in the next iteration
+	$PLAYER "${radio_url}" || error=1
 done
 
