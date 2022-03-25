@@ -5,9 +5,7 @@ PLAYER="mpv --msg-level=cplayer=warn,display-tags=status"  # mpv with less verbo
 FINDER="fzf -i -e --cycle"
 
 # add query string if this script has parameters
-if  [[ -n "$1" ]]; then
-	FINDER+=" -1 -q '$*'"
-fi
+[[ -n "$1" ]] && FINDER+=" -1 -q '$*'"
 
 # get page with genre database
 scode=$(curl -s http://radcap.ru/index-db.html)
@@ -34,14 +32,8 @@ do
 	eval "$(echo "$i" | sed -r 's/(.+") (".*")/channels[\1]=\2/')"
 done
 
-# make string list from array indices, one genre per line
-list=$(printf '%s\n' "${!channels[@]}")
-
-# sort list alphabetically
-list=$(echo "$list" | sort)
-
-# choose channel using a finder
-choice=$(echo "$list" | eval "$FINDER")
+# make sorted genre list, let user pick one
+choice=$(printf '%s\n' "${!channels[@]}" | sort | eval "$FINDER")
 
 # exit if nothing was chosen
 [[ -n "$choice" ]] || exit
@@ -60,3 +52,4 @@ do
 	$PLAYER "${radio_url}"
 	sleep 5  # wait and hope problem goes away
 done
+
