@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # change to your player and finder
-PLAYER="mpv --msg-level=cplayer=warn,display-tags=status"  # mpv with less verbose output
-FINDER="fzf -i -e --cycle"
+PLAYER='mpv --msg-level=cplayer=warn'  # mpv with less verbose output
+FINDER='fzf -i -e --cycle'
 
 # add query string if this script has parameters
 [[ -n "$1" ]] && FINDER+=" -1 -q '$*'"
 
 # get page with genre database
-scode=$(curl -s http://radcap.ru/index-db.html)
+scode=$(curl -s 'http://radcap.ru/index-db.html')
 
 # some genre tables are formatted incorrectly, correct to one element per line
 scode=$(echo "$scode" | sed -r 's/<\/span><\/a><br>/\n/')
@@ -18,7 +18,7 @@ scode=$(echo "$scode" | sed -r -z 's/РУССКИЙ\/ГОРОДСКОЙ\/ЖЕС�
 
 # get genre name and page name
 # misc genre: class="genre", all other genres: class="genres220"
-channel_list=$(echo "$scode" | grep genres | sed -r 's/.*<a href=\"(.*)\" class=\"genres(220)?\">(.*)<span.*/"\3" "\1"/')
+channel_list=$(echo "$scode" | grep 'genres' | sed -r 's/.*<a href=\"(.*)\" class=\"genres(220)?\">(.*)<span.*/"\3" "\1"/')
 
 # replace breaks and ampersands
 channel_list=${channel_list//&amp;/&}
@@ -32,7 +32,7 @@ do
 	eval "$(echo "$i" | sed -r 's/(.+") (".*")/channels[\1]=\2/')"
 done
 
-# make sorted genre list, let user pick one
+# make sorted genre list
 list=$(printf '%s\n' "${!channels[@]}" | sort)
 
 # error flag
@@ -43,6 +43,8 @@ while :
 do
 	# no error -> show selection screen
 	if [[ $error  -eq 0 ]]; then
+
+		# let user pick a genre
 		choice=$(echo "$list" | eval "$FINDER")
 
 		# exit if nothing was chosen
@@ -50,14 +52,14 @@ do
 
 		# get stream link from genre page
 		url="http://radcap.ru/${channels[$choice]}"
-		radio_url=$(curl -s "$url" | grep "\"title\":\"1\",file:\"" | sed -r 's/.*(http:.+)\"},.*/\1/')
+		radio_url=$(curl -s "$url" | grep '"title":"1",file:"' | sed -r 's/.*(http:.+)\"},.*/\1/')
 
 		# print channel
 		printf '\nRADIO CAPRICE - %s\n\n' "$choice"
 
 	# else print message and wait
 	else
-		echo "Error, waiting and retrying..."
+		echo 'Error, waiting and retrying...'
 		sleep 3
 	fi
 
