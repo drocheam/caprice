@@ -5,10 +5,14 @@ INSTALLNAME=caprice
 # name of file
 FILENAME=caprice.sh
 
-PREFIX=/usr/bin/
-DESTDIR=
+PREFIX=/usr/local
 
 install:
-	install $(FILENAME) $(DESTDIR)/$(PREFIX)/$(INSTALLNAME)
+	install -d -m755 $(PREFIX)/bin
+	install -m755 ${FILENAME} $(PREFIX)/bin/${INSTALLNAME}
+	install $(FILENAME) $(PREFIX)/$(INSTALLNAME)
+	install -d -m755 $(PREFIX)/share/${INSTALLNAME}
+	install -m644 radios.json $(PREFIX)/share/${INSTALLNAME}/radios.json
 uninstall:
-	rm $(DESTDIR)/$(PREFIX)/$(INSTALLNAME)
+	rm -r $(PREFIX)/bin/$(INSTALLNAME)
+	rm -r $(PREFIX)/share/$(INSTALLNAME)

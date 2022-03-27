@@ -1,39 +1,67 @@
 #!/bin/bash
 
 # change to your player and finder
-PLAYER='mpv --msg-level=cplayer=warn'  # mpv with less verbose output
-FINDER='fzf -i -e --cycle'
+PLAYER='mpv --msg-level=cplayer=warn'
+FINDER='fzf -i -e --cycle --with-nth ..-2 --preview "previewer {}"'
 
 # add query string if this script has parameters
-[[ -n "$1" ]] && FINDER+=" -1 -q '$*'"
+query="" && [ -n "$1" ] && query+=" -1 -q '$*'"
 
-# get page with genre database
-scode=$(curl -s 'http://radcap.ru/index-db.html')
+# decide with path to radios.json to use, use current folder if available
+radio_path='/usr/local/share/caprice/radios.json' && [ -f './radios.json' ] && radio_path='./radios.json'
 
-# some genre tables are formatted incorrectly, correct to one element per line
-scode=$(echo "$scode" | sed -r 's/<\/span><\/a><br>/\n/')
+# get name and link list from json
+# string before | holds channel name, next is the shoutcast link and last the stream link
+list=$(grep 'name' "$radio_path" | sed -r 's/.*name\":\"(.*)\","style".*shoutcast\":\"(.*)\",\"url\":\"(.*)\".*/\1 |\2|\3/')
 
-# for some reasons this genre has a newline character in its name
-scode=$(echo "$scode" | sed -r -z 's/РУССКИЙ\/ГОРОДСКОЙ\/ЖЕСТОКИЙ\/\s*РОМАНС/РУССКИЙ\/ГОРОДСКОЙ\/ЖЕСТОКИЙ\/РОМАНС/')
+# fix forwards slashes
+list=$(echo "$list" | sed 's/\\\//\//g')
 
-# get genre name and page name
-# misc genre: class="genre", all other genres: class="genres220"
-channel_list=$(echo "$scode" | grep 'genres' | sed -r 's/.*<a href=\"(.*)\" class=\"genres(220)?\">(.*)<span.*/"\3" "\1"/')
+# replace ports 8000 with 8002 for better caching
+list=$(echo "$list" | sed 's/:8000\//:8002\//')
 
-# replace breaks and ampersands
-channel_list=${channel_list//&amp;/&}
-channel_list=${channel_list//<br>/}
+# sort list
+list=$(echo "$list" | sort)
 
-# load into associative array
-# index is genre name, value is link to genre page
-declare -A channels
-for i in "${channel_list[*]}"
-do
-	eval "$(echo "$i" | sed -r 's/(.+") (".*")/channels[\1]=\2/')"
-done
+# preview function
+function previewer(){
 
-# make sorted genre list
-list=$(printf '%s\n' "${!channels[@]}" | sort)
+	choice="$*"
+	name=$( echo "$choice" | cut -d "|" -f 1)
+	link=$( echo "$choice" | cut -d "|" -f 2)
+	stream=$( echo "$choice" | cut -d "|" -f 3)
+
+	# get last-played-table
+	table=$(curl -s -A "Mozilla" --max-time 0.5 -G "$link/played.html")
+	
+	# sometimes it works at second try
+	[ -z "$table" ] && table=$(curl -s -A "Mozilla" --max-time 0.5 -G "$link/played.html")
+
+	if [ -z "$table" ]; then
+		printf '\n   Timeout getting data\n\n'
+	else	
+		table=$(echo "${table//<table/$'\n'<table}" | grep -a "Played @")
+
+		# eye candy
+		table=${table//<\/tr>/$'\n'}
+		table=${table//<td>/   }
+		table=$(echo "$table" | sed -r 's/\s+(.*)\s*Current Song/>> \1/')
+		table=$(echo "$table" | sed -e 's/<[^>]*>//g')
+
+		#table=$(echo "$table" | sed -r 's/.*Login(.*)Written.*/\1/')
+		printf '\n   RADIO CAPRICE - %s\n\n\n   Previously Played Tracks:\n\n%s' "$name" "$table"
+	fi
+
+	echo
+
+	# don't start the player immediately
+	# otherwise scrolling or typing in the results would call him multiple times
+	sleep 0.2
+	$PLAYER "$stream" &> /dev/null
+}
+
+export -f previewer
+export PLAYER
 
 # error flag
 error=0
@@ -42,34 +70,36 @@ error=0
 while : 
 do
 	# no error -> show selection screen
-	if [[ $error  -eq 0 ]]; then
+	if [ $error -eq 0 ]; then
 
 		# let user pick a genre
-		choice=$(echo "$list" | eval "$FINDER")
+		choice=$(echo "$list" | eval "$FINDER $query")
 
 		# exit if nothing was chosen
-		[[ -n "$choice" ]] || exit
+		[ -n "$choice" ] || exit
 
-		# get stream link from genre page
-		url="http://radcap.ru/${channels[$choice]}"
-		radio_url=$(curl -s "$url" | grep '"title":"1",file:"' | sed -r 's/.*(http:.+)\"},.*/\1/')
+		# remove search query for next iteration
+		query=""
+
+		# extract stream link and channel name
+		link=$( echo "$choice" | cut -d "|" -f 3)
+		name=$( echo "$choice" | cut -d "|" -f 1)
 
 		# print channel
-		printf '\nRADIO CAPRICE - %s\n\n' "$choice"
+		printf '\nRADIO CAPRICE - %s\n\n' "$name"
 
 	# else print message and wait
 	else
 		echo 'Error, waiting and retrying...'
-		sleep 3
+		sleep 2
 	fi
 
 	# reset error flag
 	error=0
 
 	# start stream
-	# set error flag on error
-	# when PLAYER exits normally,
+	# set error flag on error, when PLAYER exits normally,
 	# the selection screen will be shown in the next iteration
-	$PLAYER "${radio_url}" || error=1
+	$PLAYER "$link" || error=1
 done
 
