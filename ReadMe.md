@@ -1,9 +1,19 @@
-# caprice.sh
-## Terminal Frontend for the Radio Caprice Online Radio
+# caprice
+## Terminal Frontend for the Caprice Online Radio
  
 [Radio Caprice](http://radcap.ru/index-d.html) features 480 different genres/channels, with this script you can play them all from your terminal.
 
 fzf is used for channel selection and mpv for playback.
+
+The radios.json database is taken from the Radio Caprice Android App.
+
+---
+### Installation
+
+Run
+```
+make install
+```
 
 ---
 ### Usage
@@ -29,3 +39,4 @@ Exiting the player leads you back to the channel selection.
 ### Customization
 
 Change the PLAYER and FINDER variables in the shell script to change the playback and finder tool.
+
