@@ -12,19 +12,19 @@ The radios.json database is taken from the Radio Caprice Android App.
 
 Run
 ```
-make install
+sudo make install
 ```
 
 ---
 ### Usage
 
-Call without parameters to select from the whole genre list:
+Call without parameters for the whole genre list:
 
 ```
 caprice
 ```
 
-Call with name to prefilter channel list:
+Call with a name to prefilter the channel list:
 
 
 ```
