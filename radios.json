@@ -479,6 +479,9 @@
     {"image":"cvr_oratorio","name":"Oratorio","style":"1","id":"477","shoutcast":"http:\/\/79.120.12.130:9045","url":"http:\/\/79.120.12.130:8000\/oratorio"},
     {"image":"cvr_ambienthouse","name":"Ambient House","style":"3","id":"478","shoutcast":"http:\/\/79.120.12.130:9047","url":"http:\/\/79.120.12.130:8000\/ambienthouse"},
     {"image":"cvr_folkblackmet","name":"Folk Black Metal","style":"6","id":"479","shoutcast":"http:\/\/79.120.12.130:9049","url":"http:\/\/79.120.12.130:8000\/folkblackmet"},
-    {"image":"cvr_progbreaks","name":"Progressive\/Atmospheric Breaks","style":"3","id":"480","shoutcast":"http:\/\/79.120.12.130:9055","url":"http:\/\/79.120.12.130:8000\/progbreaks"}
+    {"image":"cvr_progbreaks","name":"Progressive\/Atmospheric Breaks","style":"3","id":"480","shoutcast":"http:\/\/79.120.12.130:9055","url":"http:\/\/79.120.12.130:8000\/progbreaks"},
+    {"image":"cvr_folkdeathmet","name":"Folk Death Metal","style":"6","id":"481","shoutcast":"http:\/\/79.120.12.130:9051","url":"http:\/\/79.120.12.130:8000\/folkdeathmet"},
+    {"image":"cvr_melodichouse","name":"Melodic House\/Techno","style":"3","id":"482","shoutcast":"http:\/\/79.120.12.130:9053","url":"http:\/\/79.120.12.130:8000\/melodichouse"},
+    {"image":"cvr_rootsrock","name":"Roots Rock","style":"11","id":"483","shoutcast":"http:\/\/79.120.12.130:9057","url":"http:\/\/79.120.12.130:8000\/rootsrock"}
   ]
 }

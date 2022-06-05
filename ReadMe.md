@@ -1,7 +1,7 @@
 # caprice
 ## Terminal Frontend for the Caprice Online Radio
  
-[Radio Caprice](http://radcap.ru/index-d.html) features 480 different genres/channels, with this script you can play them all from your terminal.
+[Radio Caprice](http://radcap.ru/index-d.html) features over 480 different genres/channels, with this script you can play them all from your terminal.
 
 fzf is used for channel selection and mpv for playback.
 
