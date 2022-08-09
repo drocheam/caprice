@@ -45,53 +45,28 @@ previewer()
 
 		printf '\n   RADIO CAPRICE - %s\n\n\n   Previously Played Tracks:\n\n%s' "$name" "$table"
 	fi
-
-	# this next playback preview part is commented out because of the thread not closing properly
-	# and therefore music still playing in background after exit
-	# is this an mpv issue?
-
-	# don't start the player immediately
-	# otherwise scrolling or typing in the results would call him too often
-	# echo && sleep 0.2
-	# $PLAYER "$stream" &> /dev/null
 }
 
 export -f previewer
 export PLAYER
 
-# error flag
-error=0
+# let user pick a genre
+choice=$(echo "$list" | eval "$FINDER $query")
 
-# use loop to restart on errors
+# exit if nothing was chosen
+[ -n "$choice" ] || exit
+
+# extract stream link and channel name
+stream=$(echo "$choice" | cut -d "|" -f 3)
+name=$(echo "$choice" | cut -d "|" -f 1)
+
+# print channel
+printf '\nRADIO CAPRICE - %s\n\n' "$name"
+
+# play and restart on errors
 while : 
 do
-	# no error -> show selection screen
-	if [ $error -eq 0 ]; then
-
-		# let user pick a genre
-		choice=$(echo "$list" | eval "$FINDER $query")
-
-		# exit if nothing was chosen
-		[ -n "$choice" ] || exit
-
-		# extract stream link and channel name
-		stream=$(echo "$choice" | cut -d "|" -f 3)
-		name=$(echo "$choice" | cut -d "|" -f 1)
-
-		# print channel
-		printf '\nRADIO CAPRICE - %s\n\n' "$name"
-
-	else
-		echo 'Error, waiting and retrying...'
-		sleep 2
-	fi
-
-	# reset error flag and query string
-	error=0
-	query=""
-
-	# start stream and set error flag on error,
-	# when PLAYER exits normally, the selection screen will be shown in the next iteration
-	$PLAYER "$stream" || error=1
+	$PLAYER "$stream"
+	echo 'Error, waiting and retrying...'
+	sleep 2
 done
-

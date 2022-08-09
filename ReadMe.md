@@ -31,10 +31,6 @@ Call with a name to prefilter the channel list:
 caprice Blues
 ```
 
-Selecting a channel starts the player.
-
-Exiting the player leads you back to the channel selection.
-
 ---
 ### Customization
 
