@@ -34,15 +34,16 @@ previewer()
 	if [ -z "$table" ]; then
 		printf '\n   Timeout getting data\n\n'
 	else
-		# make a line per source code table, choose the one with played songs
+		# make a line per source code table, choose the desired one with played songs
 		table=$(echo "${table//<table/$'\n'<table}" | grep -a "Played @")
 
 		# eye candy
-		table=${table//<td>/   }
-		table=${table//<\/tr>/$'\n'}
-		table=$(echo "$table" | sed -e 's/<[^>]*>//g')
-		table=$(echo "$table" | sed -r 's/\s+(.*)\s*Current\sSong/>> \1/')
+		table=${table//<td>/   }  # replace tabs
+		table=${table//<\/tr>/$'\n'}  # add newlines
+		table=$(echo "$table" | sed -e 's/<[^>]*>//g')  # remove html tags
+		table=$(echo "$table" | sed -r 's/\s+(.*)\s*Current\sSong/>> \1/')  # show current song
 
+		# add header
 		printf '\n   RADIO CAPRICE - %s\n\n\n   Previously Played Tracks:\n\n%s' "$name" "$table"
 	fi
 }
@@ -50,7 +51,7 @@ previewer()
 export -f previewer
 export PLAYER
 
-# let user pick a genre
+# let the user pick a genre
 choice=$(echo "$list" | eval "$FINDER $query")
 
 # exit if nothing was chosen
