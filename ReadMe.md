@@ -5,7 +5,7 @@
 
 fzf is used for channel selection and mpv for playback.
 
-The radios.json database is taken from the Radio Caprice Android App.
+The radios.json database is taken from the Radio Caprice Android App [here](https://m.apkpure.com/de/radio-caprice-online-music/ru.radcap.capriceradio/).
 
 ---
 ### Installation
