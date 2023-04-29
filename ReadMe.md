@@ -2,8 +2,8 @@
 ## Terminal Frontend for the Caprice Online Radio
  
 [Radio Caprice](http://radcap.ru/index-d.html) features over 480 different genres/channels, with this script you can play them all from your terminal.<br>
-fzf is used for channel selection and mpv for playback.<br>
-The ``radios.json`` database is taken from the Radio Caprice Android App [here](https://m.apkpure.com/de/radio-caprice-online-music/ru.radcap.capriceradio/).
+[fzf](https://github.com/junegunn/fzf) is used for channel selection and [mpv](https://github.com/mpv-player/mpv) for playback.<br>
+The ``radios.json`` database is taken from the [Radio Caprice Android App](https://m.apkpure.com/de/radio-caprice-online-music/ru.radcap.capriceradio/).
 
 
 ---
