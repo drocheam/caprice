@@ -9,20 +9,23 @@ The ``radios.json`` database is taken from the Radio Caprice Android App [here](
 ---
 ### Usage
 
-Call without parameters for the whole genre list:
+Calling caprice with the ``-h`` parameter prints the following usage information:
 
 ```
+Usage: caprice [-p <additional player options>] [-f <additional finder options>] [<query string>]
+-h for help
+
+Play channels of Radio Caprice in your terminal.
+Finder and player tool are specified inside the script (mpv and fzf by default).
+
+Exemplary calls:
 caprice
+caprice 'blues rock'
+caprice -p "--mute=yes" -f "+s"
+caprice -f "+s" electronic
 ```
 
-Call with a name to prefilter the channel list:
-
-
-```
-caprice Blues
-```
-
-After selecting a channel the audio is automatically played from the terminal using mpv.
+If there is only one result for the query the playback starts automatically.
 
 ---
 ### Screenshots

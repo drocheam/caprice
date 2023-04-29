@@ -4,7 +4,37 @@
 PLAYER='mpv --msg-level=cplayer=warn'
 FINDER='fzf -i -e --cycle --with-nth ..-2 --preview "previewer {}"'
 
-# add query string if this script got parameters
+# print usage
+usage() 
+{ 
+	echo "Usage: caprice [-p <additional player options>] [-f <additional finder options>] [<query string>]"
+	echo "-h for help"
+	echo
+	echo "Play channels of Radio Caprice in your terminal."
+	echo "Finder and player tool are specified inside the script (mpv and fzf by default)."
+	echo
+	echo "Exemplary calls:"
+	echo "caprice"
+	echo "caprice 'blues rock'"
+	echo 'caprice -p "--mute=yes" -f "+s"'
+	echo 'caprice -f "+s" electronic'
+	exit 1
+}
+
+# process arguments
+while getopts ":p:f:h" o; do
+    case "${o}" in
+        p)
+            PLAYER+=" ${OPTARG}";;
+        f)
+            FINDER+=" ${OPTARG}";;
+        * | h)
+            usage;;
+    esac
+done
+shift $((OPTIND-1))
+
+# remaining options are part of the query string
 query="" && [ -n "$1" ] && query=" -1 -q '$*'"
 
 # decide which path to radios.json to use, use current folder if available, otherwise installation path
