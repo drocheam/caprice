@@ -1,0 +1,23 @@
+name: Installation Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  install-and-test:
+    runs-on: ubuntu-latest    
+    timeout-minutes: 6
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+      
+    - name: Install Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt install -y fzf mpv
+
+    - name: Install
+      run: sudo make install
