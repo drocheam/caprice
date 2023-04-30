@@ -8,7 +8,7 @@ on:
 jobs:
   install-and-test:
     runs-on: ubuntu-latest    
-    timeout-minutes: 6
+    timeout-minutes: 3
     
     steps:
     - name: Checkout Repository
@@ -20,4 +20,5 @@ jobs:
         sudo apt install -y fzf mpv
 
     - name: Install
-      run: sudo make install
+      run: |
+        sudo make install
