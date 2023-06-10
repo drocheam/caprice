@@ -486,6 +486,7 @@
     {"image":"cvr_deathrock","name":"Deathrock","style":"11","id":"484","shoutcast":"http:\/\/79.120.12.130:9059","url":"http:\/\/79.120.12.130:8000\/deathrock"},
     {"image":"cvr_garagepunk","name":"Garage Punk","style":"11","id":"485","shoutcast":"http:\/\/79.120.12.130:9061","url":"http:\/\/79.120.12.130:8000\/garagepunk"},
     {"image":"cvr_organichouse","name":"Organic House","style":"3","id":"486","shoutcast":"http:\/\/79.120.12.130:9063","url":"http:\/\/79.120.12.130:8000\/organichouse"},
-    {"image":"cvr_freestyle","name":"Freestyle","style":"3","id":"487","shoutcast":"http:\/\/79.120.12.130:9065","url":"http:\/\/79.120.12.130:8000\/freestyle"}
+    {"image":"cvr_freestyle","name":"Freestyle","style":"3","id":"487","shoutcast":"http:\/\/79.120.12.130:9065","url":"http:\/\/79.120.12.130:8000\/freestyle"},
+    {"image":"cvr_pubrock","name":"Pub Rock","style":"11","id":"488","shoutcast":"http:\/\/79.120.12.130:9067","url":"http:\/\/79.120.12.130:8000\/pubrock"}
   ]
 }
