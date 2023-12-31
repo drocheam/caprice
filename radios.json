@@ -488,6 +488,8 @@
     {"image":"cvr_organichouse","name":"Organic House","style":"3","id":"486","shoutcast":"http:\/\/79.120.12.130:9063","url":"http:\/\/79.120.12.130:8000\/organichouse"},
     {"image":"cvr_freestyle","name":"Freestyle","style":"3","id":"487","shoutcast":"http:\/\/79.120.12.130:9065","url":"http:\/\/79.120.12.130:8000\/freestyle"},
     {"image":"cvr_pubrock","name":"Pub Rock","style":"11","id":"488","shoutcast":"http:\/\/79.120.12.130:9067","url":"http:\/\/79.120.12.130:8000\/pubrock"},
-    {"image":"cvr_hiphopsoul","name":"Hip-Hop Soul","style":"0","id":"489","shoutcast":"http:\/\/79.120.12.130:9069","url":"http:\/\/79.120.12.130:8000\/hiphopsoul"}
+    {"image":"cvr_hiphopsoul","name":"Hip-Hop Soul","style":"0","id":"489","shoutcast":"http:\/\/79.120.12.130:9069","url":"http:\/\/79.120.12.130:8000\/hiphopsoul"},
+    {"image":"cvr_fluteclass","name":"Classical Flute","style":"1","id":"490","shoutcast":"http:\/\/79.111.14.76:9161","url":"http:\/\/79.111.14.76:8000\/fluteclass"},
+    {"image":"cvr_latinhouse","name":"Latin House","style":"3","id":"491","shoutcast":"http:\/\/79.120.12.130:9071","url":"http:\/\/79.120.12.130:8000\/latinhouse"}
   ]
 }
