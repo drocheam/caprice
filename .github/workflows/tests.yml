@@ -1,4 +1,4 @@
-name: Installation Test
+name: Installation and Functionality Test
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ jobs:
     
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Install Dependencies
       run: |
@@ -22,3 +22,7 @@ jobs:
     - name: Install
       run: |
         sudo make install
+    
+    - name: Test
+      run: |
+        ./tests/tests.sh
