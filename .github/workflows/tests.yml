@@ -24,6 +24,6 @@ jobs:
         sudo make install
     
     - name: Test
+      shell: 'script -q -e -c "bash --noprofile --norc -eo pipefail {0}"'
       run: |
         ./tests/tests.sh
-      pty: true
