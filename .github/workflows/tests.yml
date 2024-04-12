@@ -26,3 +26,4 @@ jobs:
     - name: Test
       run: |
         ./tests/tests.sh
+      pty: true
