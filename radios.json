@@ -6,7 +6,7 @@
     {"image":"cvr_acousticdlues2","name":"Acoustic Blues","style":"0","id":"4","shoutcast":"http:\/\/79.111.14.76:9071","url":"http:\/\/79.111.14.76:8000\/acousticblues"},
     {"image":"cvr_acousticguitar1","name":"Acoustic Guitar","style":"7","id":"5","shoutcast":"http:\/\/79.120.39.202:9073","url":"http:\/\/79.120.39.202:8000\/acousticguitar"},
     {"image":"cvr_altcountry3","name":"Alternative Country","style":"2","id":"6","shoutcast":"http:\/\/79.111.119.111:9103","url":"http:\/\/79.111.119.111:8000\/altcountry"},
-    {"image":"cvr_altmetal","name":"Alternative Metal","style":"6","id":"7","shoutcast":"http:\/\/79.120.77.11:9035","url":"http:\/\/79.120.77.11:8000\/altmetal"},
+    {"image":"cvr_phonk","name":"Phonk\/Drift Phonk","style":"9","id":"7","shoutcast":"http:\/\/79.120.77.11:9035","url":"http:\/\/79.120.77.11:8000\/phonk"},
     {"image":"cvr_altrock","name":"Alternative Rock","style":"11","id":"8","shoutcast":"http:\/\/79.120.39.202:9037","url":"http:\/\/79.120.39.202:8000\/altrock"},
     {"image":"cvr_ambient2","name":"Ambient","style":"3","id":"9","shoutcast":"http:\/\/79.111.119.111:9023","url":"http:\/\/79.111.119.111:8000\/ambient"},
     {"image":"cvr_ambientdub1","name":"Ambient Dub","style":"3","id":"10","shoutcast":"http:\/\/79.111.14.76:9037","url":"http:\/\/79.111.14.76:8000\/ambientdub"},
@@ -95,7 +95,7 @@
     {"image":"cvr_folkmetal1","name":"Folk Metal","style":"6","id":"93","shoutcast":"http:\/\/79.120.39.202:9097","url":"http:\/\/79.120.39.202:8000\/folkmetal"},
     {"image":"cvr_folkrock3","name":"Folk Rock","style":"11","id":"94","shoutcast":"http:\/\/79.111.14.76:9097","url":"http:\/\/79.111.14.76:8000\/folkrock"},
     {"image":"cvr_freejazz1","name":"Free Jazz","style":"5","id":"95","shoutcast":"http:\/\/79.111.14.76:9095","url":"http:\/\/79.111.14.76:8000\/freejazz"},
-    {"image":"cvr_frenchchanson1","name":"French Chanson","style":"8","id":"96","shoutcast":"http:\/\/79.111.14.76:9049","url":"http:\/\/79.111.14.76:8000\/frenchchanson"},
+    {"image":"cvr_frenchchanson1","name":"Chanson","style":"8","id":"96","shoutcast":"http:\/\/79.111.14.76:9049","url":"http:\/\/79.111.14.76:8000\/frenchchanson"},
     {"image":"cvr_fullon","name":"Full On","style":"3","id":"97","shoutcast":"http:\/\/79.111.14.76:9019","url":"http:\/\/79.111.14.76:8000\/fullon"},
     {"image":"cvr_fdm2","name":"Funeral Doom Metal","style":"6","id":"98","shoutcast":"http:\/\/79.120.77.11:9085","url":"http:\/\/79.120.77.11:8000\/funeraldoom"},
     {"image":"cvr_funk2","name":"Funk","style":"0","id":"99","shoutcast":"http:\/\/79.111.119.111:9061","url":"http:\/\/79.111.119.111:8000\/funk"},
@@ -119,7 +119,7 @@
     {"image":"cvr_hardbop2","name":"Hard Bop","style":"5","id":"117","shoutcast":"http:\/\/79.111.14.76:9047","url":"http:\/\/79.111.14.76:8000\/hardbop"},
     {"image":"cvr_hardrock","name":"Hard Rock","style":"11","id":"118","shoutcast":"http:\/\/79.120.77.11:9109","url":"http:\/\/79.120.77.11:8000\/hardrock"},
     {"image":"cvr_hardstyle","name":"Hard Trance","style":"3","id":"119","shoutcast":"http:\/\/79.120.77.11:9135","url":"http:\/\/79.120.77.11:8000\/hardtrance"},
-    {"image":"cvr_hardcore","name":"Hardcore Metal","style":"6","id":"120","shoutcast":"http:\/\/79.111.14.76:9081","url":"http:\/\/79.111.14.76:8000\/hardcoremetal"},
+    {"image":"cvr_hardcore","name":"Hardcore\/Melodic Hardcore","style":"6","id":"120","shoutcast":"http:\/\/79.111.14.76:9081","url":"http:\/\/79.111.14.76:8000\/hardcoremetal"},
     {"image":"cvr_hardtechno","name":"Hardcore Techno","style":"3","id":"121","shoutcast":"http:\/\/79.120.39.202:9001","url":"http:\/\/79.120.39.202:8000\/hardcoretech"},
     {"image":"cvr_hardtrance3","name":"Hardstyle Trance","style":"3","id":"122","shoutcast":"http:\/\/79.111.14.76:9063","url":"http:\/\/79.111.14.76:8000\/hardstyle"},
     {"image":"cvr_harmonicablues2","name":"Harmonica Blues","style":"0","id":"123","shoutcast":"http:\/\/79.120.39.202:9081","url":"http:\/\/79.120.39.202:8000\/harpblues"},
@@ -180,7 +180,7 @@
     {"image":"cvr_newage","name":"New Age","style":"3","id":"178","shoutcast":"http:\/\/79.120.77.11:9047","url":"http:\/\/79.120.77.11:8000\/newage"},
     {"image":"cvr_newwave","name":"New Wave","style":"11","id":"179","shoutcast":"http:\/\/79.120.39.202:9065","url":"http:\/\/79.120.39.202:8000\/newwave"},
     {"image":"cvr_nujazz","name":"Nu Jazz","style":"5","id":"180","shoutcast":"http:\/\/79.111.14.76:9011","url":"http:\/\/79.111.14.76:8000\/nujazz"},
-    {"image":"cvr_numetal8","name":"Nu Metal","style":"6","id":"181","shoutcast":"http:\/\/79.111.14.76:9033","url":"http:\/\/79.111.14.76:8000\/numetal"},
+    {"image":"cvr_numetal8","name":"Alternative\/Nu Metal","style":"6","id":"181","shoutcast":"http:\/\/79.111.14.76:9033","url":"http:\/\/79.111.14.76:8000\/numetal"},
     {"image":"cvr_nudisco3","name":"Nu-Disco","style":"8","id":"182","shoutcast":"http:\/\/79.111.119.111:9081","url":"http:\/\/79.111.119.111:8000\/nudisco"},
     {"image":"cvr_oi","name":"Oi!\/Street Punk","style":"11","id":"183","shoutcast":"http:\/\/79.111.119.111:9125","url":"http:\/\/79.111.119.111:8000\/oistreetpunk"},
     {"image":"cvr_oldies","name":"Oldies","style":"7","id":"184","shoutcast":"http:\/\/79.120.77.11:9107","url":"http:\/\/79.120.77.11:8000\/oldies"},
@@ -392,7 +392,6 @@
     {"image":"cvr_forestpsytrance2","name":"Forest Psytrance","style":"3","id":"390","shoutcast":"http:\/\/213.141.131.10:9133","url":"http:\/\/213.141.131.10:8000\/forestpsytrance"},
     {"image":"cvr_frenchrap","name":"French Hip-Hop\/Rap","style":"9","id":"391","shoutcast":"http:\/\/213.141.131.10:9135","url":"http:\/\/213.141.131.10:8000\/frenchrap"},
     {"image":"cvr_germanrap","name":"German/Deutsche Hip-Hop/Rap","style":"9","id":"392","shoutcast":"http:\/\/213.141.131.10:9043","url":"http:\/\/213.141.131.10:8000\/germanrap"},
-    {"image":"cvr_hardcorepunk","name":"Hardcore Punk","style":"6","id":"393","shoutcast":"http:\/\/213.141.131.10:9141","url":"http:\/\/213.141.131.10:8000\/hardcorepunk"},
     {"image":"cvr_jungle","name":"Jungle\/Ragga Jungle\/Raggacore","style":"3","id":"394","shoutcast":"http:\/\/213.141.131.10:9055","url":"http:\/\/213.141.131.10:8000\/jungle"},
     {"image":"cvr_mathcore","name":"Mathcore/Chaotic Hardcore","style":"6","id":"395","shoutcast":"http:\/\/79.120.39.202:9191","url":"http:\/\/79.120.39.202:8000\/mathcore"},
     {"image":"cvr_modal","name":"Modal Jazz","style":"5","id":"396","shoutcast":"http:\/\/213.141.131.10:9159","url":"http:\/\/213.141.131.10:8000\/modaljazz"},
@@ -490,6 +489,8 @@
     {"image":"cvr_pubrock","name":"Pub Rock","style":"11","id":"488","shoutcast":"http:\/\/79.120.12.130:9067","url":"http:\/\/79.120.12.130:8000\/pubrock"},
     {"image":"cvr_hiphopsoul","name":"Hip-Hop Soul","style":"0","id":"489","shoutcast":"http:\/\/79.120.12.130:9069","url":"http:\/\/79.120.12.130:8000\/hiphopsoul"},
     {"image":"cvr_fluteclass","name":"Classical Flute","style":"1","id":"490","shoutcast":"http:\/\/79.111.14.76:9161","url":"http:\/\/79.111.14.76:8000\/fluteclass"},
-    {"image":"cvr_latinhouse","name":"Latin House","style":"3","id":"491","shoutcast":"http:\/\/79.120.12.130:9071","url":"http:\/\/79.120.12.130:8000\/latinhouse"}
+    {"image":"cvr_latinhouse","name":"Latin House","style":"3","id":"491","shoutcast":"http:\/\/79.120.12.130:9071","url":"http:\/\/79.120.12.130:8000\/latinhouse"},
+    {"image":"cvr_italodance","name":"Italodance","style":"8","id":"492","shoutcast":"http:\/\/79.111.14.76:9163","url":"http:\/\/79.111.14.76:8000\/italodance"},
+    {"image":"cvr_rpi","name":"RPI (Rock Progressivo Italiano)","style":"11","id":"493","shoutcast":"http:\/\/79.111.14.76:9165","url":"http:\/\/79.111.14.76:8000\/rpi"}
   ]
 }
