@@ -445,7 +445,7 @@
     {"image":"cvr_chalga2","name":"Bulgarian Pop-Folk\/Ethnopop\/Chalga","style":"8","id":"444","shoutcast":"http:\/\/213.141.131.10:9201","url":"http:\/\/213.141.131.10:8000/chalga"},
     {"image":"cvr_darksynth2","name":"Darksynth\/Dark Synthwave","style":"3","id":"445","shoutcast":"http:\/\/213.141.131.10:9197","url":"http:\/\/213.141.131.10:8002/darksynth"},
     {"image":"cvr_gabber11","name":"Gabber\/Early\/Mainstream Hardcore","style":"3","id":"446","shoutcast":"http:\/\/213.141.131.10:9193","url":"http:\/\/213.141.131.10:8000/gabber"},
-    {"image":"cvr_traditionalpop1","name":"Traditional Pop\/Classic Pop","style":"8","id":"447","shoutcast":"http:\/\/213.141.131.10:9205","url":"http:\/\/213.141.131.10:8000/tradpop"},
+    {"image":"cvr_traditionalpop1","name":"Traditional Pop\/Classic Pop","style":"8","id":"447","shoutcast":"http:\/\/213.141.131.10:9141","url":"http:\/\/213.141.131.10:8000/tradpop"},
     {"image":"cvr_vibraphonejazz1","name":"Vibraphone In Jazz","style":"5","id":"448","shoutcast":"http:\/\/213.141.131.10:9199","url":"http:\/\/213.141.131.10:8002/vibraphone"},
     {"image":"cvr_zydeco2","name":"Zydeco\/Cajun\/Creole Music","style":"4","id":"449","shoutcast":"http:\/\/213.141.131.10:9203","url":"http:\/\/213.141.131.10:8000/zydeco"},
     {"image":"cvr_afrobeat1","name":"Afrobeat","style":"4","id":"450","shoutcast":"http:\/\/79.120.39.202:9173","url":"http:\/\/79.120.39.202:8000\/afrobeat"},
@@ -491,6 +491,7 @@
     {"image":"cvr_fluteclass","name":"Classical Flute","style":"1","id":"490","shoutcast":"http:\/\/79.111.14.76:9161","url":"http:\/\/79.111.14.76:8000\/fluteclass"},
     {"image":"cvr_latinhouse","name":"Latin House","style":"3","id":"491","shoutcast":"http:\/\/79.120.12.130:9071","url":"http:\/\/79.120.12.130:8000\/latinhouse"},
     {"image":"cvr_italodance","name":"Italodance","style":"8","id":"492","shoutcast":"http:\/\/79.111.14.76:9163","url":"http:\/\/79.111.14.76:8000\/italodance"},
-    {"image":"cvr_rpi","name":"RPI (Rock Progressivo Italiano)","style":"11","id":"493","shoutcast":"http:\/\/79.111.14.76:9165","url":"http:\/\/79.111.14.76:8000\/rpi"}
+    {"image":"cvr_rpi","name":"RPI (Rock Progressivo Italiano)","style":"11","id":"493","shoutcast":"http:\/\/79.111.14.76:9165","url":"http:\/\/79.111.14.76:8000\/rpi"},
+    {"image":"cvr_ghouse","name":"Ghetto\/Booty\/G-House","style":"3","id":"494","shoutcast":"http:\/\/79.111.14.76:9167","url":"http:\/\/79.111.14.76:8000\/ghouse"}
   ]
 }

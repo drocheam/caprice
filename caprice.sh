@@ -42,10 +42,26 @@ radio_path='/usr/local/share/caprice/radios.json' && [ -f './radios.json' ] && r
 
 # get name and link list from json
 # string before | holds channel name, followed by the shoutcast link and lastly the stream link
-list=$(sed -r -n 's/.*name":"([^"]+)","style.*shoutcast":"([^"]+)","url":"([^"]+)".*/\1 |\2|\3/p' "$radio_path")
+list=$(sed -r -n 's/.*name":"([^"]+)","style":"([0-9]+).*shoutcast":"([^"]+)","url":"([^"]+)".*/style\2 \1 |\3|\4/p' "$radio_path")
 
 # fix forwards slashes and replace ports 8000 with 8002 for better caching
 list=$(echo "$list" | sed 's|\\/|/|g' | sed 's|:8000/|:8002/|')
+
+# replace style number by genre name
+list=$(echo "$list" | sed -r -n ""\
+" s|style0 |Blues/Funk/Soul         -   |p; "\
+" s|style1 |Classical               -   |p; "\
+" s|style2 |Country                 -   |p; "\
+" s|style3 |Electronic              -   |p; "\
+" s|style4 |Ethinc/Folk/Spiritual   -   |p; "\
+" s|style5 |Jazz                    -   |p; "\
+" s|style6 |Metal/Hardcore          -   |p; "\
+" s|style7 |Miscellaneous           -   |p; "\
+" s|style8 |Pop                     -   |p; "\
+" s|style9 |Rap/Hip Hop             -   |p; "\
+"s|style10 |Reggae/Ska              -   |p; "\
+"s|style11 |Rock                    -   |p; "\
+"s|style12 |WAHCOH                  -   |p; ")
 
 # sort list alphabetically
 list=$(echo "$list" | sort)
@@ -53,7 +69,7 @@ list=$(echo "$list" | sort)
 # preview function
 previewer()
 {
-	name=$(echo "$*" | cut -d "|" -f 1)
+    name=$(echo "$*" | cut -d "|" -f 1 | tr -s " ") 
 	link=$(echo "$*" | cut -d "|" -f 2)
 	stream=$(echo "$*" | cut -d "|" -f 3)
 
@@ -79,25 +95,24 @@ previewer()
 }
 
 export -f previewer
-export PLAYER
 
-# let the user pick a genre
-choice=$(echo "$list" | eval "$FINDER $query")
-
-# exit if nothing was chosen
-[ -n "$choice" ] || exit
-
-# extract stream link and channel name
-stream=$(echo "$choice" | cut -d "|" -f 3)
-name=$(echo "$choice" | cut -d "|" -f 1)
-
-# print channel
-printf '\nRADIO CAPRICE - %s\n\n' "$name"
-
-# play and restart on errors
+# selection and play loop
+# exit player to reselect a radio, exit finder to exit program
 while : 
 do
+    # let the user pick a genre
+    choice=$(echo "$list" | eval "$FINDER $query")
+
+    # exit if nothing was chosen
+    [ -n "$choice" ] || exit
+
+    # extract stream link and channel name
+    stream=$(echo "$choice" | cut -d "|" -f 3)
+    name=$(echo "$choice" | cut -d "|" -f 1 | tr -s " ") 
+
+    # print channel
+    printf '\nRADIO CAPRICE - %s\n\n' "$name"
+
+    # play
 	$PLAYER "$stream"
-	echo 'Error, waiting and retrying...'
-	sleep 2
 done

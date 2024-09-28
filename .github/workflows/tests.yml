@@ -24,6 +24,7 @@ jobs:
         sudo make install
     
     - name: Test
+      # see https://github.com/actions/runner/issues/241#issuecomment-842566950
       shell: 'script -q -e -c "bash --noprofile --norc -eo pipefail {0}"'
       run: |
         ./tests/tests.sh
