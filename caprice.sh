@@ -45,7 +45,7 @@ radio_path='/usr/local/share/caprice/radios.json' && [ -f './radios.json' ] && r
 list=$(sed -r -n 's/.*name":"([^"]+)","style":"([0-9]+).*shoutcast":"([^"]+)","url":"([^"]+)".*/style\2 \1 |\3|\4/p' "$radio_path")
 
 # fix forwards slashes and replace ports 8000 with 8002 for better caching
-list=$(echo "$list" | sed 's|\\/|/|g' | sed 's|:8000/|:8002/|')
+list=$(echo "$list" | sed -e 's|\\/|/|g' -e 's|:8000/|:8002/|')
 
 # replace style number by genre name
 list=$(echo "$list" | sed -r -n ""\
@@ -53,7 +53,7 @@ list=$(echo "$list" | sed -r -n ""\
 " s|style1 |Classical               -   |p; "\
 " s|style2 |Country                 -   |p; "\
 " s|style3 |Electronic              -   |p; "\
-" s|style4 |Ethinc/Folk/Spiritual   -   |p; "\
+" s|style4 |Ethnic/Folk/Spiritual   -   |p; "\
 " s|style5 |Jazz                    -   |p; "\
 " s|style6 |Metal/Hardcore          -   |p; "\
 " s|style7 |Miscellaneous           -   |p; "\
@@ -69,28 +69,32 @@ list=$(echo "$list" | sort)
 # preview function
 previewer()
 {
-    name=$(echo "$*" | cut -d "|" -f 1 | tr -s " ") 
-	link=$(echo "$*" | cut -d "|" -f 2)
-	stream=$(echo "$*" | cut -d "|" -f 3)
+    # read name, link and stream. Remove spaces from name
+    IFS="|" read -r name link stream <<< "$*"
+    name=$(echo "$name" | tr -s ' ')
 
 	# get last-played-table
 	curl_cmd='curl -s -A "Mozilla" --max-time 0.5 -G "$link/played.html"'
-	table=$(eval "$curl_cmd" || eval "$curl_cmd") # try twice
+	table=$(eval "$curl_cmd" || eval "$curl_cmd")  # try twice
 	
 	if [ -z "$table" ]; then
 		printf '\n   Timeout getting data\n\n'
 	else
-		# make a line per source code table, choose the desired one with played songs
-		table=$(echo "${table//<table/$'\n'<table}" | grep -a "Played @")
+        # get table containing data. -a needed as data is sometimes binary
+        table=$(echo "${table//<table/$'\n'<table}" | grep -a "Played @")
 
-		# eye candy
-		table=${table//<td>/   }  # replace tabs
-		table=${table//<\/tr>/$'\n'}  # add newlines
-		table=$(echo "$table" | sed -e 's/<[^>]*>//g')  # remove html tags
-		table=$(echo "$table" | sed -r 's/\s+(.*)\s*Current\sSong/>> \1/')  # show current song
+		# get table and reformat
+        table=$(echo "$table" | sed -E '
+            s/<\/tr>/\r\n/g                             # </tr> to newline
+            s/.*Song Title//g                           # remove headers
+            s/<td>/   /g                                # Replace <td> with spaces
+            s/<[^>]*>//g                                # Remove HTML tags
+            s/[0-9]{2}:[0-9]{2}:[0-9]{2} //g            # Remove timestamps
+            s/\s*(.*)\s*Current\sSong/>>   \1/          # Show current song
+        ')
 
 		# add header
-		printf '\n   RADIO CAPRICE - %s\n\n\n   Previously Played Tracks:\n\n%s' "$name" "$table"
+		printf '\n     RADIO CAPRICE - %s\n\n     Previously Played Tracks:\n\n%s' "$name" "$table"
 	fi
 }
 
@@ -107,11 +111,11 @@ do
     [ -n "$choice" ] || exit
 
     # extract stream link and channel name
-    stream=$(echo "$choice" | cut -d "|" -f 3)
-    name=$(echo "$choice" | cut -d "|" -f 1 | tr -s " ") 
+    IFS="|" read -r name _ stream <<< "$choice"
+    name=$(echo "$name" | tr -s ' ')
 
     # print channel
-    printf '\nRADIO CAPRICE - %s\n\n' "$name"
+    printf "\nRADIO CAPRICE - $name\n\n"
 
     # play
 	$PLAYER "$stream"

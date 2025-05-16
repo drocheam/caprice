@@ -164,7 +164,7 @@
     {"image":"cvr_mbm","name":"Melodic Black Metal","style":"6","id":"162","shoutcast":"http:\/\/79.111.119.111:9079","url":"http:\/\/79.111.119.111:8000\/melodicblackmetal"},
     {"image":"cvr_mdm","name":"Melodic Death Metal","style":"6","id":"163","shoutcast":"http:\/\/79.120.77.11:9091","url":"http:\/\/79.120.77.11:8000\/melodicdeath"},
     {"image":"cvr_metalcore4","name":"Metalcore","style":"6","id":"164","shoutcast":"http:\/\/79.120.39.202:9027","url":"http:\/\/79.120.39.202:8000\/metalcore"},
-    {"image":"cvr_metalstep","name":"Metalstep","style":"3","id":"165","shoutcast":"http:\/\/79.111.14.76:9135","url":"http:\/\/79.111.14.76:8000\/metalstep"},
+    {"image":"cvr_metalstep","name":"Metalstep\/Brostep\/Metal Dubstep","style":"3","id":"165","shoutcast":"http:\/\/79.111.14.76:9135","url":"http:\/\/79.111.14.76:8000\/metalstep"},
     {"image":"cvr_middleeast","name":"Middle East Music","style":"4","id":"166","shoutcast":"http:\/\/79.111.119.111:9133","url":"http:\/\/79.111.119.111:8000\/middleeast"},
     {"image":"cvr_mintechhouse","name":"Minimal Tech House","style":"3","id":"167","shoutcast":"http:\/\/79.111.119.111:9003","url":"http:\/\/79.111.119.111:8000\/mintechhouse"},
     {"image":"cvr_mintech","name":"Minimal Techno","style":"3","id":"168","shoutcast":"http:\/\/79.120.39.202:9005","url":"http:\/\/79.120.39.202:8000\/mintechno"},
@@ -321,7 +321,7 @@
     {"image":"cvr_heavypowermetal","name":"Heavy Power Metal","style":"6","id":"319","shoutcast":"http:\/\/79.120.12.130:9089","url":"http:\/\/79.120.12.130:8000\/heavypowermetal"},
     {"image":"cvr_progpowermetal","name":"Progressive Power Metal","style":"6","id":"320","shoutcast":"http:\/\/79.111.119.111:9161","url":"http:\/\/79.111.119.111:8000\/progpowermetal"},
     {"image":"cvr_epicmetal","name":"Epic Metal","style":"6","id":"321","shoutcast":"http:\/\/79.111.119.111:9163","url":"http:\/\/79.111.119.111:8000\/epicmetal"},
-    {"image":"cvr_noise","name":"Noise","style":"3","id":"322","shoutcast":"http:\/\/79.120.39.202:9043","url":"http:\/\/79.120.39.202:8000\/noise"},
+    {"image":"cvr_powernoise","name":"Power\/Rhythmic Noise\/DBM (Distorted Beat Music)","style":"3","id":"322","shoutcast":"http:\/\/79.120.39.202:9043","url":"http:\/\/79.120.39.202:8000\/powernoise"},
     {"image":"cvr_nwobhm","name":"NWOBHM (New Wave Of British Heavy Metal)","style":"6","id":"323","shoutcast":"http:\/\/79.120.12.130:9093","url":"http:\/\/79.120.12.130:8000\/nwobhm"},
     {"image":"cvr_anime2","name":"Anime OST\/Score","style":"7","id":"324","shoutcast":"http:\/\/79.111.119.111:9167","url":"http:\/\/79.111.119.111:8000\/anime"},
     {"image":"cvr_chamberjazz","name":"Chamber Jazz","style":"5","id":"325","shoutcast":"http:\/\/79.120.39.202:9161","url":"http:\/\/79.120.39.202:8000\/chamberjazz"},
@@ -492,6 +492,11 @@
     {"image":"cvr_latinhouse","name":"Latin House","style":"3","id":"491","shoutcast":"http:\/\/79.120.12.130:9071","url":"http:\/\/79.120.12.130:8000\/latinhouse"},
     {"image":"cvr_italodance","name":"Italodance","style":"8","id":"492","shoutcast":"http:\/\/79.111.14.76:9163","url":"http:\/\/79.111.14.76:8000\/italodance"},
     {"image":"cvr_rpi","name":"RPI (Rock Progressivo Italiano)","style":"11","id":"493","shoutcast":"http:\/\/79.111.14.76:9165","url":"http:\/\/79.111.14.76:8000\/rpi"},
-    {"image":"cvr_ghouse","name":"Ghetto\/Booty\/G-House","style":"3","id":"494","shoutcast":"http:\/\/79.111.14.76:9167","url":"http:\/\/79.111.14.76:8000\/ghouse"}
+    {"image":"cvr_ghouse","name":"Ghetto\/Booty\/G-House","style":"3","id":"494","shoutcast":"http:\/\/79.111.14.76:9167","url":"http:\/\/79.111.14.76:8000\/ghouse"},
+    {"image":"cvr_progrelated","name":"Prog Related","style":"7","id":"495","shoutcast":"http:\/\/79.111.14.76:9169","url":"http:\/\/79.111.14.76:8000\/progrelated"},
+    {"image":"cvr_powerelectronics","name":"Power Electronics\/Death Industrial","style":"3","id":"496","shoutcast":"http:\/\/79.111.14.76:9171","url":"http:\/\/79.111.14.76:8000\/powerelectronics"},
+    {"image":"cvr_harshnoise","name":"Harsh Noise","style":"3","id":"497","shoutcast":"http:\/\/79.111.14.76:9173","url":"http:\/\/79.111.14.76:8000\/harshnoise"},
+    {"image":"cvr_mpb","name":"MPB (Musica Popular Brasileira)","style":"8","id":"498","shoutcast":"http:\/\/79.111.14.76:9175","url":"http:\/\/79.111.14.76:8000\/mpb"},
+    {"image":"cvr_freeimprovisation","name":"Free Improvisation","style":"5","id":"499","shoutcast":"http:\/\/79.120.77.11:9153","url":"http:\/\/79.120.77.11:8000\/freeimprovisation"}
   ]
 }
