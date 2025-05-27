@@ -3,8 +3,8 @@
  
 [Radio Caprice](http://radcap.ru/index-d.html) features over 490 different genres/channels, with this script you can play them all from your terminal.<br>
 [fzf](https://github.com/junegunn/fzf) is used for channel selection and [mpv](https://github.com/mpv-player/mpv) for playback.<br>
+Change the ``PLAYER`` and ``FINDER`` variables in the shell script to change the playback and finder tool.
 The ``radios.json`` database is taken from the [Radio Caprice Android App](https://m.apkpure.com/de/radio-caprice-online-music/ru.radcap.capriceradio/).
-
 
 ---
 ### Usage
@@ -30,6 +30,7 @@ If there is only one result for the query the playback starts automatically.
 ---
 ### Screenshots
 
+
 **Search Screen**
 ![search screen screenshot](screenshots/search_screen-fs8.png)
 
@@ -46,9 +47,4 @@ sudo make install
 ```
 
 from the main folder.
-
----
-### Customization
-
-Change the ``PLAYER`` and ``FINDER`` variables in the shell script to change the playback and finder tool.
 
