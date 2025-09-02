@@ -194,7 +194,7 @@
     {"image":"cvr_pianojazz","name":"Piano Jazz\/Strade","style":"5","id":"192","shoutcast":"http:\/\/79.111.119.111:9059","url":"http:\/\/79.111.119.111:8000\/pianojazz"},
     {"image":"cvr_pop4","name":"Pop","style":"8","id":"193","shoutcast":"http:\/\/79.120.77.11:9017","url":"http:\/\/79.120.77.11:8000\/pop"},
     {"image":"cvr_popballads2","name":"Pop Ballads","style":"8","id":"194","shoutcast":"http:\/\/79.120.77.11:9061","url":"http:\/\/79.120.77.11:8000\/popballads"},
-    {"image":"cvr_pop802","name":"80's Collection","style":"7","id":"195","shoutcast":"http:\/\/79.120.39.202:9103","url":"http:\/\/79.120.39.202:8000\/pop80"},
+    {"image":"cvr_pop802","name":"80's Music Collection","style":"7","id":"195","shoutcast":"http:\/\/79.120.39.202:9103","url":"http:\/\/79.120.39.202:8000\/pop80"},
     {"image":"cvr_ussr2","name":"Pop Music USSR","style":"8","id":"196","shoutcast":"http:\/\/79.120.77.11:9117","url":"http:\/\/79.120.77.11:8000\/ussr"},
     {"image":"cvr_poppunk1","name":"Pop Punk","style":"11","id":"197","shoutcast":"http:\/\/79.111.14.76:9035","url":"http:\/\/79.111.14.76:8000\/poppunk"},
     {"image":"cvr_poprock4","name":"Pop Rock","style":"11","id":"198","shoutcast":"http:\/\/79.120.77.11:9105","url":"http:\/\/79.120.77.11:8000\/poprock"},
@@ -410,7 +410,7 @@
     {"image":"cvr_classavant","name":"Classical Avant-Garde","style":"1","id":"409","shoutcast":"http:\/\/213.141.131.10:9017","url":"http:\/\/213.141.131.10:8000\/classavant"},
     {"image":"cvr_minimalism","name":"Minimalism\/Postminimalism","style":"1","id":"410","shoutcast":"http:\/\/213.141.131.10:9157","url":"http:\/\/213.141.131.10:8000\/minimalism"},
     {"image":"cvr_hardhouse3","name":"Hard House","style":"3","id":"411","shoutcast":"http:\/\/213.141.131.10:9143","url":"http:\/\/213.141.131.10:8000\/hardhouse"},
-    {"image":"cvr_90","name":"90's Collection","style":"7","id":"412","shoutcast":"http:\/\/213.141.131.10:9099","url":"http:\/\/213.141.131.10:8000\/90collection"},
+    {"image":"cvr_90","name":"90's Music Collection","style":"7","id":"412","shoutcast":"http:\/\/213.141.131.10:9099","url":"http:\/\/213.141.131.10:8000\/90collection"},
     {"image":"cvr_trumpet","name":"Jazz Trumpet","style":"5","id":"413","shoutcast":"http:\/\/213.141.131.10:9183","url":"http:\/\/213.141.131.10:8000\/trumpetjazz"},
     {"image":"cvr_avantrock","name":"Experimental\/Avant Rock","style":"11","id":"414","shoutcast":"http:\/\/213.141.131.10:9105","url":"http:\/\/213.141.131.10:8000\/avantrock"},
     {"image":"cvr_fieldrecordings","name":"Field Recordings","style":"3","id":"415","shoutcast":"http:\/\/213.141.131.10:9127","url":"http:\/\/213.141.131.10:8000\/fieldrecording"},
@@ -423,8 +423,8 @@
     {"image":"cvr_folkpop","name":"Folk Pop","style":"8","id":"422","shoutcast":"http:\/\/213.141.131.10:9129","url":"http:\/\/213.141.131.10:8000\/folkpop"},
     {"image":"cvr_oceania2","name":"Oceania/Australia","style":"4","id":"423","shoutcast":"http:\/\/213.141.131.10:9165","url":"http:\/\/213.141.131.10:8000\/oceania"},
     {"image":"cvr_singer1","name":"Singer-Songwriter","style":"7","id":"424","shoutcast":"http:\/\/213.141.131.10:9175","url":"http:\/\/213.141.131.10:8000\/singersongwriter"},
-    {"image":"cvr_60s","name":"60's Collection","style":"7","id":"425","shoutcast":"http:\/\/213.141.131.10:9097","url":"http:\/\/213.141.131.10:8000\/60collection"},
-    {"image":"cvr_70s","name":"70's Collection","style":"7","id":"426","shoutcast":"http:\/\/213.141.131.10:9001","url":"http:\/\/213.141.131.10:8000\/70collection"},
+    {"image":"cvr_60s","name":"60's Music Collection","style":"7","id":"425","shoutcast":"http:\/\/213.141.131.10:9097","url":"http:\/\/213.141.131.10:8000\/60collection"},
+    {"image":"cvr_70s","name":"70's Music Collection","style":"7","id":"426","shoutcast":"http:\/\/213.141.131.10:9001","url":"http:\/\/213.141.131.10:8000\/70collection"},
     {"image":"cvr_andean","name":"Andean\/South American Music","style":"4","id":"427","shoutcast":"http:\/\/213.141.131.10:9101","url":"http:\/\/213.141.131.10:8000\/andean"},
     {"image":"cvr_electrotech","name":"Electro Techno","style":"3","id":"428","shoutcast":"http:\/\/213.141.131.10:9035","url":"http:\/\/213.141.131.10:8000\/electrotechno"},
     {"image":"cvr_funkmetal","name":"Funk Rock/Metal","style":"11","id":"429","shoutcast":"http:\/\/213.141.131.10:9137","url":"http:\/\/213.141.131.10:8000\/funkrock"},
@@ -453,7 +453,7 @@
     {"image":"cvr_deathnroll","name":"Death 'n' Roll","style":"6","id":"452","shoutcast":"http:\/\/79.120.39.202:9177","url":"http:\/\/79.120.39.202:8000\/deathnroll"},
     {"image":"cvr_gothblackmet","name":"Gothic Black Metal","style":"6","id":"453","shoutcast":"http:\/\/79.120.39.202:9179","url":"http:\/\/79.120.39.202:8000\/gothblackmet"},
     {"image":"cvr_gothdeathmet","name":"Gothic Death Metal","style":"6","id":"454","shoutcast":"http:\/\/79.120.39.202:9181","url":"http:\/\/79.120.39.202:8000\/gothdeathmet"},
-    {"image":"cvr_00s","name":"2000's Collection","style":"7","id":"455","shoutcast":"http:\/\/79.120.12.130:9001","url":"http:\/\/79.120.12.130:8000\/00collection"},
+    {"image":"cvr_00s","name":"2000's Music Collection","style":"7","id":"455","shoutcast":"http:\/\/79.120.12.130:9001","url":"http:\/\/79.120.12.130:8000\/00collection"},
     {"image":"cvr_celticmetal","name":"Celtic Metal","style":"6","id":"456","shoutcast":"http:\/\/79.120.12.130:9003","url":"http:\/\/79.120.12.130:8000\/celticmetal"},
     {"image":"cvr_celticrock","name":"Celtic Rock","style":"11","id":"457","shoutcast":"http:\/\/79.120.12.130:9005","url":"http:\/\/79.120.12.130:8000\/celticrock"},
     {"image":"cvr_cyberpunk","name":"Cyberpunk","style":"3","id":"458","shoutcast":"http:\/\/79.120.12.130:9007","url":"http:\/\/79.120.12.130:8000\/cyberpunk"},
@@ -497,6 +497,7 @@
     {"image":"cvr_powerelectronics","name":"Power Electronics\/Death Industrial","style":"3","id":"496","shoutcast":"http:\/\/79.111.14.76:9171","url":"http:\/\/79.111.14.76:8000\/powerelectronics"},
     {"image":"cvr_harshnoise","name":"Harsh Noise","style":"3","id":"497","shoutcast":"http:\/\/79.111.14.76:9173","url":"http:\/\/79.111.14.76:8000\/harshnoise"},
     {"image":"cvr_mpb","name":"MPB (Musica Popular Brasileira)","style":"8","id":"498","shoutcast":"http:\/\/79.111.14.76:9175","url":"http:\/\/79.111.14.76:8000\/mpb"},
-    {"image":"cvr_freeimprovisation","name":"Free Improvisation","style":"5","id":"499","shoutcast":"http:\/\/79.120.77.11:9153","url":"http:\/\/79.120.77.11:8000\/freeimprovisation"}
+    {"image":"cvr_freeimprovisation","name":"Free Improvisation","style":"5","id":"499","shoutcast":"http:\/\/79.120.77.11:9153","url":"http:\/\/79.120.77.11:8000\/freeimprovisation"},
+    {"image":"cvr_2010s","name":"2010's Music Collection","style":"7","id":"500","shoutcast":"http:\/\/79.111.14.76:9177","url":"http:\/\/79.111.14.76:8000\/2010collection"}
   ]
 }
