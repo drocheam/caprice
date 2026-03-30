@@ -498,6 +498,8 @@
     {"image":"cvr_harshnoise","name":"Harsh Noise","style":"3","id":"497","shoutcast":"http:\/\/79.111.14.76:9173","url":"http:\/\/79.111.14.76:8000\/harshnoise"},
     {"image":"cvr_mpb","name":"MPB (Musica Popular Brasileira)","style":"8","id":"498","shoutcast":"http:\/\/79.111.14.76:9175","url":"http:\/\/79.111.14.76:8000\/mpb"},
     {"image":"cvr_freeimprovisation","name":"Free Improvisation","style":"5","id":"499","shoutcast":"http:\/\/79.120.77.11:9153","url":"http:\/\/79.120.77.11:8000\/freeimprovisation"},
-    {"image":"cvr_2010s","name":"2010's Music Collection","style":"7","id":"500","shoutcast":"http:\/\/79.111.14.76:9177","url":"http:\/\/79.111.14.76:8000\/2010collection"}
+    {"image":"cvr_2010s","name":"2010's Music Collection","style":"7","id":"500","shoutcast":"http:\/\/79.111.14.76:9177","url":"http:\/\/79.111.14.76:8000\/2010collection"},
+    {"image":"cvr_earlyblues","name":"Early\/Pre-War Blues","style":"0","id":"501","shoutcast":"http:\/\/79.120.77.11:9155","url":"http:\/\/79.120.77.11:8000\/earlyblues"},
+    {"image":"cvr_protoprog","name":"Proto-Prog\/Early Progressive Rock","style":"11","id":"502","shoutcast":"http:\/\/79.120.77.11:9157","url":"http:\/\/79.120.77.11:8000\/protoprog"}
   ]
 }
