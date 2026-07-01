@@ -1,17 +1,24 @@
 #!/bin/bash
 
-# define player and finder
+# define default settings
 PLAYER='mpv --msg-level=cplayer=warn'
 FINDER='fzf -i -e --cycle --with-nth ..-2 --preview "previewer {}"'
+HQ=""
 
 # print usage
 usage() 
 { 
-	echo "Usage: caprice [-p <additional player options>] [-f <additional finder options>] [<query string>]"
-	echo "-h for help"
-	echo
+	echo "Usage: caprice [options] [query string]"
+    echo
 	echo "Play channels of Radio Caprice in your terminal."
 	echo "Finder and player tool are specified inside the script (mpv and fzf by default)."
+    echo "Leave the query string empty for an interactive selection."
+	echo
+	echo "Options:"
+    echo "-p <arg>: additional player options"
+    echo "-f <arg>: additional finder options"
+    echo "-q:       higher bitrate setting (up to 320kbps instead of optimized ~48kbps AAC)"
+    echo "-h:       help"
 	echo
 	echo "Exemplary calls:"
 	echo "caprice"
@@ -22,12 +29,14 @@ usage()
 }
 
 # process arguments
-while getopts ":p:f:h" o; do
+while getopts ":p:f:hq" o; do
     case "${o}" in
         p)
             PLAYER+=" ${OPTARG}";;
         f)
             FINDER+=" ${OPTARG}";;
+        q)
+            HQ="1";;
         * | h)
             usage;;
     esac
@@ -44,8 +53,11 @@ radio_path='/usr/local/share/caprice/radios.json' && [ -f './radios.json' ] && r
 # string before | holds channel name, followed by the shoutcast link and lastly the stream link
 list=$(sed -r -n 's/.*name":"([^"]+)","style":"([0-9]+).*shoutcast":"([^"]+)","url":"([^"]+)".*/style\2 \1 |\3|\4/p' "$radio_path")
 
-# fix forwards slashes and replace ports 8000 with 8002 for better caching
-list=$(echo "$list" | sed -e 's|\\/|/|g' -e 's|:8000/|:8002/|')
+# fix forwards slashes 
+list=$(echo "$list" | sed -e 's|\\/|/|g')
+
+# replace ports 8000 with 8002 for lower bitrate
+[[ -z $HQ ]] && list=$(echo "$list" | sed -e 's|:8000/|:8002/|')
 
 # replace style number by genre name
 list=$(echo "$list" | sed -r -n ""\

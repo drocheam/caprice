@@ -24,6 +24,14 @@ timeout --signal=SIGKILL 5s caprice "46542654"
 timeout --signal=SIGKILL 5s caprice -f "+s"
 [ $? -eq 137 ]  || exit 1
 
+# call with high quality setting
+timeout --signal=SIGKILL 5s caprice -q "Art Rock"
+[ $? -eq 137 ]  || exit 1
+
+# call for help
+timeout --signal=SIGKILL 5s caprice -h
+[ $? -eq 137 ]  || exit 1
+
 # call with finder and player arguments
 timeout --signal=SIGKILL 5s caprice -p "--mute=yes" -f "+s" "Blues Rock"
 [ $? -eq 137 ]  || exit 1
