@@ -30,7 +30,11 @@ timeout --signal=SIGKILL 5s caprice -q "Art Rock"
 
 # call for help
 timeout --signal=SIGKILL 5s caprice -h
-[ $? -eq 137 ]  || exit 1
+[ $? -eq 0 ]  || exit 1
+
+# invalid parameter
+timeout --signal=SIGKILL 5s caprice -k
+[ $? -eq 1 ]  || exit 1
 
 # call with finder and player arguments
 timeout --signal=SIGKILL 5s caprice -p "--mute=yes" -f "+s" "Blues Rock"

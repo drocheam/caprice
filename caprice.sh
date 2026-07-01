@@ -25,7 +25,6 @@ usage()
 	echo "caprice 'blues rock'"
 	echo 'caprice -p "--mute=yes" -f "+s"'
 	echo 'caprice -f "+s" electronic'
-	exit 1
 }
 
 # process arguments
@@ -37,8 +36,10 @@ while getopts ":p:f:hq" o; do
             FINDER+=" ${OPTARG}";;
         q)
             HQ="1";;
-        * | h)
-            usage;;
+        h)
+            usage && exit 0;;
+        *)
+            usage && exit 1;;
     esac
 done
 shift $((OPTIND-1))
