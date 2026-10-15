@@ -219,7 +219,7 @@
     {"image":"cvr_pumpinghouse","name":"Pumping House","style":"3","id":"217","shoutcast":"http:\/\/79.120.77.11:9139","url":"http:\/\/79.120.77.11:8000\/pumpinghouse"},
     {"image":"cvr_punkrock","name":"Punk","style":"11","id":"218","shoutcast":"http:\/\/79.120.77.11:9043","url":"http:\/\/79.120.77.11:8000\/punk"},
     {"image":"cvr_rnb5","name":"R&B","style":"0","id":"219","shoutcast":"http:\/\/79.120.77.11:9071","url":"http:\/\/79.120.77.11:8000\/rnb"},
-    {"image":"cvr_rap","name":"Rap","style":"9","id":"220","shoutcast":"http:\/\/79.120.77.11:9031","url":"http:\/\/79.120.77.11:8000\/rap"},
+    {"image":"cvr_femalerap","name":"Female Hip-Hop/Rap","style":"9","id":"220","shoutcast":"http:\/\/79.120.77.11:9031","url":"http:\/\/79.120.77.11:8000\/femalerap"},
     {"image":"cvr_rapcore","name":"Rapcore","style":"6","id":"221","shoutcast":"http:\/\/79.111.119.111:9165","url":"http:\/\/79.111.119.111:8000\/rapcore"},
     {"image":"cvr_reggae2","name":"Reggae","style":"10","id":"222","shoutcast":"http:\/\/79.120.39.202:9063","url":"http:\/\/79.120.39.202:8000\/reggae"},
     {"image":"cvr_relax2","name":"Relaxation Music","style":"7","id":"223","shoutcast":"http:\/\/79.120.39.202:9109","url":"http:\/\/79.120.39.202:8000\/relaxation"},
@@ -497,9 +497,10 @@
     {"image":"cvr_powerelectronics","name":"Power Electronics\/Death Industrial","style":"3","id":"496","shoutcast":"http:\/\/79.111.14.76:9171","url":"http:\/\/79.111.14.76:8000\/powerelectronics"},
     {"image":"cvr_harshnoise","name":"Harsh Noise","style":"3","id":"497","shoutcast":"http:\/\/79.111.14.76:9173","url":"http:\/\/79.111.14.76:8000\/harshnoise"},
     {"image":"cvr_mpb","name":"MPB (Musica Popular Brasileira)","style":"8","id":"498","shoutcast":"http:\/\/79.111.14.76:9175","url":"http:\/\/79.111.14.76:8000\/mpb"},
-    {"image":"cvr_freeimprovisation","name":"Free Improvisation","style":"5","id":"499","shoutcast":"http:\/\/79.120.77.11:9153","url":"http:\/\/79.120.77.11:8000\/freeimprovisation"},
+    {"image":"cvr_freeimprovisation","name":"Free Improvisation","style":"5","id":"499","shoutcast":"http:\/\/79.120.12.130:9107","url":"http:\/\/79.120.12.130:8000\/freeimprovisation"},
     {"image":"cvr_2010s","name":"2010's Music Collection","style":"7","id":"500","shoutcast":"http:\/\/79.111.14.76:9177","url":"http:\/\/79.111.14.76:8000\/2010collection"},
-    {"image":"cvr_earlyblues","name":"Early\/Pre-War Blues","style":"0","id":"501","shoutcast":"http:\/\/79.120.77.11:9155","url":"http:\/\/79.120.77.11:8000\/earlyblues"},
-    {"image":"cvr_protoprog","name":"Proto-Prog\/Early Progressive Rock","style":"11","id":"502","shoutcast":"http:\/\/79.120.77.11:9157","url":"http:\/\/79.120.77.11:8000\/protoprog"}
+    {"image":"cvr_earlyblues","name":"Early\/Pre-War Blues","style":"0","id":"501","shoutcast":"http:\/\/79.120.12.130:9105","url":"http:\/\/79.120.12.130:8000\/earlyblues"},
+    {"image":"cvr_protoprog","name":"Proto-Prog\/Early Progressive Rock","style":"11","id":"502","shoutcast":"http:\/\/79.120.12.130:9103","url":"http:\/\/79.120.12.130:8000\/protoprog"},
+    {"image":"cvr_classconcertos","name":"Classical Concertos","style":"1","id":"503","shoutcast":"http:\/\/79.120.12.130:9101","url":"http:\/\/79.120.12.130:8000\/classconcertos"}
   ]
 }
